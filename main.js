@@ -24,4 +24,54 @@ for (let i = 0; i < massiv.length; i++) {
 
 console.log('Сумма элементов:', sum)
 console.log('Максимальное число:', max)
-console.log('Числа больше 10:', big)    
+console.log('Числа больше 10:', big) 
+
+
+
+console.log(' Задание 3 ')
+
+const students = [
+    { name: 'Анна', grade: 4 },
+    { name: 'Игорь', grade: 5 },
+    { name: 'Олег', grade: 3 },
+    { name: 'Мария', grade: 5 },
+    { name: 'Иван', grade: 2 }
+]
+
+let Grade = Number(prompt('Введите оценку '))
+let GradeSum = 0
+const goodStudents = []
+
+for (let i = 0; i < students.length; i++) {
+    GradeSum = GradeSum + students[i].grade
+    
+    if (students[i].grade > Grade) {
+        goodStudents.push(students[i].name)
+    }
+}
+
+let Grade_crednyy = GradeSum / students.length
+
+console.log('Ученики с оценкой выше заданной:', goodStudents)
+console.log('Средняя оценка класса:',  Grade_crednyy)
+
+
+
+console.log(' Задание 4 ')
+
+
+function рандом() {
+    const secretnoechislo = Math.floor(Math.random() * 10) + 1
+    
+    let chislo = Number(prompt('Задание 4: Угадай число от 1 до 10'))
+
+    if (chislo === secretnoechislo) {
+        console.log('  Вы угадали!')
+    } else if (chislo < secretnoechislo) {
+        console.log('Не угадали, число было больше!')
+    } else {
+        console.log('Не угадали. Загаданное число было меньше! ' )
+    }
+}
+
+рандом()
